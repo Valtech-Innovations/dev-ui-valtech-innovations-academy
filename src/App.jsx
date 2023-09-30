@@ -1,34 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import pageNotFound from './pages/pageNotFound';
+
+import AboutPage from './pages/aboutPage';
+import HomePage from './pages/homePage';
+import CoursesPage from './pages/coursePage';
+import ContacPage from './pages/contactPage';
+import Carousel from './container/carousel';
+import Testimonial from './container/testimonial';
+
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    {/* <Testimonial/> */}
+    {/* <Carousel />  */}
+        <Router>
+          <Routes>
+          <Route path="*" element={<pageNotFound/>} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/courses" element={<CoursesPage />} />
+            <Route path="/contact" element={<ContacPage />} />
+          </Routes>
+      </Router>
+
+{/* not work*/}
+
+{/* <Testimonial />  */}
+
+
+
+
+
+</>
+
+
   )
 }
 
