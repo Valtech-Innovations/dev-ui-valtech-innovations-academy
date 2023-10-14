@@ -19,7 +19,7 @@ function HomePage(){
         <Categories />
         <Courses/>
         <Team/>
-        {/* <Testimonial/> */}
+        <Testimonial/>
     </Layout>
     </>)
 }

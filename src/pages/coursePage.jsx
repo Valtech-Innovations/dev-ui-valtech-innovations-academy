@@ -10,7 +10,7 @@ function CoursesPage(){
         <Header name="Courses" />
         <Categories/>
         <Courses/>
-        {/* <Testimonial/> */}
+        <Testimonial/>
     </Layout>
     </>)
 }
