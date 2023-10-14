@@ -5,17 +5,20 @@ import Service from "../container/services";
 import About from "../container/about";
 import Categories from "../container/categories"
 import Courses from "../container/courses"
+import Team from "../container/team"
 import Testimonial from "../container/testimonial";
+
 
 function HomePage(){
     return(<>
    
     <Layout>
-        {/* <Carousel/> */}
+        <Carousel/>
         <Service />
         <About />
         <Categories />
         <Courses/>
+        <Team/>
         {/* <Testimonial/> */}
     </Layout>
     </>)

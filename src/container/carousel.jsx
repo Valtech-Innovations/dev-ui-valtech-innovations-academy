@@ -1,5 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react'; // Import useEffect
+
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+
+
 function Carousel(){
+
+    useEffect(() => {
+        // Initialize Owl Carousel after the component has mounted
+        $('.header-carousel').owlCarousel({
+            items: 1,
+            loop: true,
+            margin: 10,
+            nav: true,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"], // Customize the navigation arrows
+          });
+    
+        // Return a function to clean up Owl Carousel when the component unmounts
+        return () => {
+          $('.header-carousel').trigger('destroy.owl.carousel');
+        };
+      }, []); // The empty dependency array ensures this effect runs only once on mount
+
     return(<>
      {/* <!-- Carousel Start --> */}
     <div className="container-fluid p-0 mb-5">
