@@ -432,3 +432,16 @@
     padding-right: 0;
     border-right: none;
 }
+
+/* custom css added  */
+
+.custom-bg {
+    background-color: #06bbcc;
+    color: #fff !important;    
+}
+
+#testimonial-carousel .owl-nav {
+    display: none !important;
+}
+
+  
